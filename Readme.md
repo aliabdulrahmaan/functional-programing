@@ -35,3 +35,60 @@ and contain some methods like:
  
 ```
 
+### Consumer :
+
+```
+Represents an operation that accepts a single input argument and returns no result. 
+Unlike most other functional interfaces, Consumer is expected to operate via side-effects. 
+This is a functional interface whose functional method is accept(Object) .
+
+Inteface methods:
+
+1. accept()
+ - Performs this operation on the given argument.
+ 
+2. andThen(Consumer<? super T> after)
+ - Returns a composed Consumer that performs, in sequence, 
+  this operation followed by the after operation.
+```
+
+### Function :
+
+```
+It represents a function which takes in one argument and produces a result. 
+Hence this functional interface takes in 2 generics namely as follows:
+
+ >> T: denotes the type of the input argument
+ >>R: denotes the return type of the function
+ 
+Inteface methods:
+
+1. apply()
+ - This method takes in only one parameter t which is the function argument.
+ 
+2. andThen(Consumer<? super T> after)
+ - It returns a composed function wherein the parameterized function will be executed after the first one. 
+   If evaluation of either function throws an error, it is relayed to the caller of the composed function.
+
+2. compose()
+ - It returns a composed function wherein the parameterized function will be executed after the first one. 
+   If evaluation of either function throws an error, it is relayed to the caller of the composed function.
+   
+2. andThen(Consumer<? super T> after)
+ - It returns a composed function wherein the parameterized function will be executed after the first one. 
+   If evaluation of either function throws an error, it is relayed to the caller of the composed function.   
+   
+```
+
+### Supplier :
+
+```
+The Supplier Interface is a part of the java.util.function package which has been introduced since Java 8,
+to implement functional programming in Java. It represents a function which does not take
+in any argument but produces a value of type T.
+
+Inteface methods:
+
+1. T get()
+ 
+```
