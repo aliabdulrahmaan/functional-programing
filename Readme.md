@@ -11,6 +11,7 @@ Major functional interfaces in java are:
 - Function 
 - Supplier
 - BinaryOperator 
+- BiFunction
 - UnaryOperator
 
 ### Predicate :
@@ -90,5 +91,25 @@ in any argument but produces a value of type T.
 Inteface methods:
 
 1. T get()
+ 
+```
+
+### BinaryOperator :
+
+```
+Is a functional interface, which takes in two arguments of the same type and returns a result that is
+also of the same type.This interface extends the BiFunction interface
+
+Inteface methods:
+
+1. R apply(T t, U u);
+2. minBy(Comparator<? super T> comparator)
+ - This method returns a BinaryOperator, which returns the lesser/minimum of the two given inputs, 
+   as per the specified Comparator.
+ 
+3. maxBy(Comparator<? super T> comparator)
+ - This method returns a BinaryOperator, which returns the greater/maximum of the two given inputs, 
+   as per the specified Comparator.
+
  
 ```
